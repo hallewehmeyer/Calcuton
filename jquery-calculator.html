@@ -80,7 +80,7 @@ $(document).ready(function() {
 // Your code here...
 var firstNumberStr = ""
 var secondNumberStr = ""
-var isOperator = false;
+var operator = "";
 var result = 0;
 
 $(".number").click(function(){
@@ -95,22 +95,31 @@ $(".number").click(function(){
      console.log($(this).val())
     secondNumberStr+= $(this).val();
     var secondNumber = parseInt(secondNumberStr);
+
+
   } 
-})
+});
 
-$(".operator").click(function(){
-  isOperator =true;
-  // if(isOperator === true){
-  //   $("#operator").append($(this).val())
-  // }
-
-})
-
- 
-
-
+$("operator").click(function() {
+  var sign = operator.append($(this).val());
+  console.log($(this).val());
 
 });
+
+// $(".operator").click(function(){
+//   isOperator =true;
+//   if ($(".operator") === $("#button-multiply"))
+//     result = firstNumber * secondNumber;
+//   if ($(operator ==='' ))
+  
+
+//   // if(isOperator === true){
+//   //   $("#operator").append($(this).val())
+//   // }
+
+});
+
+ 
 
 </script>
 
