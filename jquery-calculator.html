@@ -78,6 +78,36 @@
 $(document).ready(function() {
 
 // Your code here...
+var firstNumberStr = ""
+var secondNumberStr = ""
+var isOperator = false;
+var result = 0;
+
+$(".number").click(function(){
+  if(!isOperator){
+    $("#first-number").append($(this).val())
+     console.log($(this).val())
+    firstNumberStr+= $(this).val();
+    var firstNumber = parseInt(firstNumberStr);
+  }
+  else{
+    $("#second-number").append($(this).val())
+     console.log($(this).val())
+    secondNumberStr+= $(this).val();
+    var secondNumber = parseInt(secondNumberStr);
+  } 
+})
+
+$(".operator").click(function(){
+  isOperator =true;
+  // if(isOperator === true){
+  //   $("#operator").append($(this).val())
+  // }
+
+})
+
+ 
+
 
 
 });
